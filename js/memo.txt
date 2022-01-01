@@ -1,0 +1,38 @@
+/* Memo start */
+- アロー関数は暗黙のthisを受け取らない
+- reduceの引数名(acc, cur)
+- テンプレートリテラル内での3項演算 `Move to ${type === 'prev' ? 'left' : 'right'}`
+- テンプレートリテラル内で関数実行 `Total is ${num.add(2)}`
+- DOMから要素を削除するには親要素からremoveChildメソッドで削除する element.parentElement.removeChild('hoge')
+- 複数のイベントを配列にまとめて関数を登録する ['hashchange', 'load'].forEach(event => window.addEventListener(event, func))
+- メソッドの返り値にthisを返してメソッドチェーンを可能にする（カスケード） obj.changeTxt('changed').changeColor('red')
+- Object.keys(obj) 引数のオブジェクトからプロパティを配列で取得 Object.keys(obj).forEach(prop => console.log(prop))
+- プロパティへの冗長なアクセスは変数に格納することで簡略化する。 => const myProp = myobject.property
+- Object.create() 第一引数に指定したオブジェクトのプロトタイプを継承した新しいオブジェクトを作成する
+- ES5 継承 Person.prototype = Object.create(Human.prototype)
+- Person.prototype.constructor = Human
+- グローバルスコープで定義したvarはグローバルオブジェクトのプロパティになる。 
+- メソッドにアロー関数は使用するべきでない（理由？）
+- スプレッド構文(Spread syntax) 引数や配列、オブジェクトの中で値を展開する
+- 例1：const array = [1,2,3] sum(a, b, c) {return a + b + c} sum(...array)
+- 例2：const array2 = [...array, 4, 5, 6]
+- 例3：const merged = {...obj, ...obj2}
+- 残余引数(rest parametas)
+- 例：func(a, b, c, ...rest) {console.log(a,b,c,rest)} func(1, 2, 3, 4, 5, 6) -> 1,2,3,[4,5,6]
+- 分割代入(destructuring assignment)
+- 例1：const [a,b,c] = [1,2,3]
+- 例2：const {a,b,c} = {a:1,b:2,c:3}
+- 例3：function sum([a,b,c]) {return a + b + c} -> sum([1,2,3])
+- 例4：function fullname({first, last}) {return first + last} -> fullname({first: 'Hiroyuki', last: 'Nagasawa'})
+- short circuiting(短略評価) -> const value = a || b truthyが見つかった時点でtruthyな値を返す
+- short circuiting(短略評価) -> const value = a && b falsyが見つかった時点でfalsyな値を返す
+- Nullish Coalescing -> const value = a ?? b 左辺の評価結果がnullishなら右辺の評価結果を返す。nullishな値はnullかundefinedのみ
+- optional chaining -> console.log(obj.prop?.nestedProp?.value) -> ?を付与したプロパティがnullishのとき、ネストを無視して即座にundefindを返す
+- ファクトリ関数 ひとつのオブジェクトを返す関数
+- mutable（可変）とimmutable（不変）を意識してプログラミングする
+- globalオブジェクトを参照したい場合はglobalThisを使う（thisでアクセスするのは非推奨。実行環境によってthisの参照が変わるため）
+
+/*　Visual Studio Code */
+- control + shift + @ -> panel open
+- type in live-server on terminal command line
+- control + c -> terminal operation stop
