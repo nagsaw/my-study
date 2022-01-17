@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+JP:wght@700&family=Roboto:wght@700&display=swap&subset=japanese');
+
+.mont {
+  font-family: 'Montserrat', sans-serif;
+}
+.noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.robo {
+  font-family: 'Roboto', sans-serif;
+}
